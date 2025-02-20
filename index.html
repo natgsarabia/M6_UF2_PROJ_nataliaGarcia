@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <dialog id="introDialog">
+        <div class="dialog-content">
+          <h2>¡Bienvenido a mi web!</h2>
+          <p>Para esta web he utilizado tres APIs web, que serían:</p>
+          <ul>
+            <li><strong>Web Notification API</strong>: Para avisar al usuario si se encuentrar restaurantes en la población escogida.<br></li>
+            <li><strong>Web Share API</strong>: Para compartir, si se quiere, la información de un restaurante. (el restaurante debe de tener url, si no envía el URL de localhost :( ).<br></li>
+            <li><strong>Web Animations API</strong>: Para añadir movimiento a la apertura y cierre de modales.</li>
+          </ul>
+          <button id="closeDialogBtn">Cerrar</button>
+        </div>
+      </dialog>
+      
+
+    <div id="restaurantModal" class="modal">
+        <div class="modal-content">
+            <div class="cerrar">&times;</div>
+            <h2 id="restaurantName"></h2>
+            <p id="restaurantDireccion"></p>
+            <a id="restaurantWeb" href="#" target="_blank"></a>
+            <div class="share">Compartir</div>
+
+        </div>
+    </div>
+    <h1>Descubre España</h1>
+    <form action="">
+        <!-- <label>Nom: </label><input type="text" id="nom"><p></p> -->
+        <label>Comunitat: </label><select name="ccaa" id="ccaa">
+            <option value="" disabled selected>Selecciona una opción</option>
+        </select><br><br>
+        <label>Província: </label><select name="provincia" id="provincia">
+            <option value="" disabled selected>Selecciona una opción</option>
+        </select><br><br>
+        <label>Població: </label><select name="poblacion" id="poblacion">
+            <option value="" disabled selected>Selecciona una opción</option>
+        </select><br><br>
+        <input type="submit" value="ENVIAR" id="submit">
+    </form>
+    <div id="image-container"></div>
+    <div id="restaurantes-container">
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
